@@ -59,6 +59,11 @@ if($message == "/donate"){
         send_message($chat_id, "https://reboot13.hashnode.dev/donate");
     }
 
+    if ($message == "/samady") {
+      send_message("خودتی یا نه ؟");
+
+    }
+
 ///Commands with text
 
 
