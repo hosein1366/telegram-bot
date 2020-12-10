@@ -6,7 +6,7 @@
     //$token = "1446447446:AAE3OBP_grLNSX6RP1rmhWp5TUnYeCeuoZg";
 
 
-    if (isset($update_array["message"])){
+    if (isset($request["message"])){
 
         $text = $request["message"]["text"];
         $chat_id = $request["message"]["chat"]["id"];
