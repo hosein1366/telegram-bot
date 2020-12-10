@@ -31,6 +31,7 @@ $channel_id = "-1001351780832";
           \n/git <username>
           \n/info (User Info)
           \n/donate (Donate to Creator)
+          \n/samady (mr)
           ");
     }
 
