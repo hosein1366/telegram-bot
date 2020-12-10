@@ -10,7 +10,7 @@
     $firstname = $update["message"]["from"]["first_name"];
     $bot_name = "" ;//your bot name
  /// for broadcasting in Channel
-$channel_id = "-1001351780832"; 
+$channel_id = "-1001351780832";
 
     //Extact match Commands
     if($message == "/start"){
@@ -20,7 +20,7 @@ $channel_id = "-1001351780832";
     if($message == "/cmds"){
         send_message($chat_id, "
           /search <input> (Google search)
-          \n/syt <query> (Youtube Search)
+          \n/syt <دستور> (Youtube Search)
           \n/dict <word> (Dicitonary)
           \n/smirror <name> (Search Movies/Series)
           \n/bin <bin> (Bin Data)
@@ -46,7 +46,7 @@ $channel_id = "-1001351780832";
         $time = date("h:i a", time());
         send_message($chat_id, $time);
     }
-    
+
      if($message == "/info"){
         send_message($chat_id, "User Info \nName: $firstname\nID:$id \nUsername: @$username");
     }
@@ -150,7 +150,7 @@ else {
     send_message($chat_id, "Enter Valid BIN");
 }
    }
-    
+
 
 //Dictionary API
       if(strpos($message, "/dict") === 0){
@@ -189,12 +189,12 @@ $pronoun = $out[0]['meaning']['pronoun'][0]['definition'];
 
 if ($word = $dict) {
         send_message($chat_id, "
-Word: $word 
+Word: $word
 Noun : $noun
-Pronoun: $pronoun 
-Verb : $verb 
-Adjective: $adjective 
-Adverb: $adverb 
+Pronoun: $pronoun
+Verb : $verb
+Adjective: $adjective
+Adverb: $adverb
 Checked By @$username ");
     }
     else {
@@ -250,7 +250,7 @@ Status: $description
 Temp : $celcius °C
 Feels Like : $feels °C
 Humidity: $humidity
-Country: $country 
+Country: $country
 Checked By @$username ");
 }
 else {
@@ -355,7 +355,7 @@ else {
     send_message($chat_id, "Enter Valid Value");
 }
    }
-    
+
 
 
 
@@ -365,14 +365,14 @@ else {
         $text = urlencode($message);
         file_get_contents("https://api.telegram.org/bot$apiToken/sendMessage?chat_id=$chat_id&text=$text");
     }
-    
+
 //Send Messages with Markdown (Global)
       function send_MDmessage($chat_id, $message){
        $apiToken =  "1268566452:AAFyCg_A5Cz-W1nWWekCcwx5zNG8uI-X_U8";
         $text = urlencode($message);
         file_get_contents("https://api.telegram.org/bot$apiToken/sendMessage?chat_id=$chat_id&text=$text&parse_mode=Markdown");
     }
-    
+
 
 ///Send Message to Channel
       function send_Cmessage($channel_id, $message){
