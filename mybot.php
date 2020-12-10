@@ -2,7 +2,7 @@
         //https://api.telegram.org/bot1467108696:AAFjeFW2Ulhkca4TpchpfnCLyUwr9ftZToM/setwebhook?url=https://commenters.ir/bot.php
 
     $json = file_get_contents("php://input");
-    $request = json_decode($json);
+    $request = json_decode($json , true);
     //$token = "1446447446:AAE3OBP_grLNSX6RP1rmhWp5TUnYeCeuoZg";
 
 
