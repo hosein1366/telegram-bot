@@ -60,7 +60,7 @@ if($message == "/donate"){
     }
 
     if ($message == "/samady") {
-      send_message("خودتی یا نه ؟");
+      send_message($chat_id, "خودتی یا نه ؟");
 
     }
 
